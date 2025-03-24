@@ -1,0 +1,248 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #333;
+    
+}
+
+header {
+    background: #ff6f61;
+    color: white;
+    padding: 15px 20;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    left:0;
+    justify-content: space-between;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+.search-box {
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    align-items: center;
+}
+
+.search-box input {
+   
+    padding: 8px 12px;
+    border: none;
+    background: white;
+    color: #ff6f61;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+
+.search-box button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.hero {
+    text-align: center;
+    background-image: url(https://www.shutterstock.com/image-photo/selection-take-out-fast-foods-260nw-1774690922.jpg);
+    width: 100%;  
+    margin: 0 ; 
+    padding: 100px;
+}
+
+
+
+
+.hero-content h2 {
+    font-size: 36px;
+    font-size: 20px;
+    
+    
+
+}
+h2 {
+    text-align: center;
+    font-size: 0;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+.recipe-card img {
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+.recipe-card h3 {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.recipe-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff6f61;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e64a19;
+}
+
+
+.back-btn {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    text-align: center;
+    background: #444;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: #222;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .search-box {
+        margin-top: 10px;
+    }
+    
+    .recipe-gallery {
+        justify-content: center;
+    }
+    
+    .recipe-card {
+        width: 45%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .search-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+}
